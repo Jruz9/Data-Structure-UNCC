@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class firstQuestion {
 
-    public static void main(String arg[]){
+    public static void main(String[] arg){
 
 
         //Declare an 1-D array of 1000 integer elements. Call it “a”.
@@ -66,7 +66,7 @@ public class firstQuestion {
         System.out.println("freq of 10 = "+frequencyNumberTen);
 
 
-        //reverses arrray
+        //reverses array
         //
 
         Integer reverseCounter=a.length-1;
@@ -80,7 +80,7 @@ public class firstQuestion {
         b=a;    //b array refers to the other array
 
         System.out.println(a[435]);
-        System.out.println(b[435]); 
+        System.out.println(b[435]);
 
 
 
