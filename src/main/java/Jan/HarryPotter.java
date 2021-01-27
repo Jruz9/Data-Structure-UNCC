@@ -4,10 +4,13 @@ import java.util.ArrayList;
 
 public class HarryPotter {
 
-    public void  main(String[] arg)
+    public static void main(String[] arg)
     {
+        ArrayList<String>reverseArray;
         try {
-            reverse(new String[]{"Harry Potter", "Ronald Bilius", "Hermione Jean Granger"});
+            reverseArray=reverse(new String[]{"Harry Potter", "Ronald Bilius", "Hermione Jean Granger"});
+            System.out.println(reverseArray);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -16,18 +19,11 @@ public class HarryPotter {
     //  reverse containing
     //  "Hermione Jean Granger" as the first element, "Ronald Bilius" as the second element, and
     //  "Harry Potter" as the third element.
-    public ArrayList<String> reverse(String[] wizards) throws Exception {
-
+    private static ArrayList<String> reverse(String[] wizards) throws Exception {
         ArrayList<String> reverseNameArray=new ArrayList<>();
-        for (int i = 0; i < wizards.length; i++) {
-            reverse(wizards[i]);
-            
+        for (int i =wizards.length-1; i >= 0; i--) {
+            reverseNameArray.add(wizards[i]);
         }
-        return null;
-
-    }
-
-    private void reverse(String wizardName){
-
+        return reverseNameArray;
     }
 }
