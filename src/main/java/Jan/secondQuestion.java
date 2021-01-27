@@ -3,10 +3,11 @@ package Jan;
 import java.util.ArrayList;
 
 public class secondQuestion {
-    public void main(String[] arg){
+    public  static void main(String[] arg){
         String letter="anna";
         char[] characterArray=letter.toCharArray();
-       // ArrayList<Character> characterArrayList=new ArrayList<Character>();
+
+        // ArrayList<Character> characterArrayList=new ArrayList<Character>();
 
        int booleanNumber= isPalindromic(characterArray,0,3);
 
@@ -38,7 +39,7 @@ public class secondQuestion {
     //A palindrome is
     // a word, number, phrase, or other sequence of characters which reads the
     // same backward as forward, such as madam or racecar.
-    public int  isPalindromic(char[] characterArray, int startIndex , int endIndex ){
+    public static int  isPalindromic(char[] characterArray, int startIndex , int endIndex ){
         // this for loop check half of the arraylist
         //ex: kayak: k=k, a=a so remember that list is half so 5/2=2.5 or 2
         //ex:mom :m=m so 3/2=1.5 or 1
@@ -57,18 +58,20 @@ public class secondQuestion {
         //this uppercase all letter in the array, just to be save.
         // should be an array when fixed.
 
-        for (int i = 0; i < endIndex; i++) {
+        for (int i = 0; i <= endIndex; i++) {
             Character upperCaseLetter=Character.toUpperCase(characterArray[i]);
             characterArray[i]=upperCaseLetter;
         }
 
-
-        Integer reverseCounter=endIndex;
-        for (int i = 0; i < endIndex/2; i++,reverseCounter--) {
-            if(!(characterArray[i]==characterArray[reverseCounter])){
+        //A =A
+        //N=N
+        int reverseCounter=endIndex;
+        for (int j = startIndex; j < endIndex/2; j++,reverseCounter--) {
+            if((characterArray[j]!=characterArray[reverseCounter])){
                 return 0;
             }
         }
+
         return 1;
     }
 }
