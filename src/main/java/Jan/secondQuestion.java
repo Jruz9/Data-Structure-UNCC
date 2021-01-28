@@ -45,6 +45,10 @@ public class secondQuestion {
             return -2;
         }
 
+        if(characterArray==null){
+            return -1;
+        }
+
 
         //this uppercase all letter in the array
         for (int i = 0; i <= endIndex; i++) {
