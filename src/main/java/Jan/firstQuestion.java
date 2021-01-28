@@ -7,12 +7,13 @@ public class firstQuestion {
     public static void main(String[] arg){
 
 
-        //Declare an 1-D array of 1000 integer elements. Call it “a”.
-        //Assign random integer values (between 1 and 10) to those 1000 elements.
-        int[] a =new int[1000];
-        Random randomNumber= new Random();
+        int[] a =new int[1000]; //creates the array of ints
+        
+        Random randomNumber= new Random();  //uses the random class for random
+        //sets the range for the random class
         Integer minimumNumber=0;
         Integer maximumNumber=10;
+
         int frequencyNumberOne=0;
         int frequencyNumberTwo=0;
         int frequencyNumberThree=0;
@@ -24,11 +25,13 @@ public class firstQuestion {
         int frequencyNumberNine=0;
         int frequencyNumberTen=0;
 
+        //Creates a random number from 1-10 in the array;
         for(int i=0;i<a.length;i++){
             int randomNum = randomNumber.nextInt((maximumNumber-minimumNumber)+1)+minimumNumber;
             a[i]=randomNum;
         }
 
+        //adds one for each occurrence of each number in the array
         for (int i : a) {
             if (i == 1) {
                 frequencyNumberOne++;
@@ -54,6 +57,7 @@ public class firstQuestion {
 
 
         }
+        // prints the occurrence of each number in the array
         System.out.println("freq of 1 = "+frequencyNumberOne);
         System.out.println("freq of 2 = "+frequencyNumberTwo);
         System.out.println("freq of 3 = "+frequencyNumberThree);
@@ -67,23 +71,16 @@ public class firstQuestion {
 
 
         //reverses array
-        //
-
-        Integer reverseCounter=a.length-1;
+        int reverseCounter=a.length-1;
         for (int j = 0;j<(a.length)/2; j++,reverseCounter--) {
             int temporaryNumber=a[j];   //stores the first number;
             a[j]=a[reverseCounter]; //replaces first number of array with the final one
             a[reverseCounter]=temporaryNumber;  //replaces last number in array with the first.
         }
 
-        int[] b=new int[1000];
+        int[] b;
         b=a;    //b array refers to the other array
-
-        System.out.println(a[435]);
-        System.out.println(b[435]);
-
-
-
+        System.out.println(b[1]);
 
     }
 
